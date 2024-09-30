@@ -1,2 +1,2 @@
-# Wheatear-Travels
-This is a travel website 
+# Wheatear-TRAVELS
+Travelling Website

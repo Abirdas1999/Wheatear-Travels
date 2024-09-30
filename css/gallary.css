@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navlogo {
+  width: 7rem;
+}
+.get_a_quote {
+  border-radius: 50px;
+}
+
+.main-container {
+  overflow: hidden;
+}
+.html {
+  scroll-behavior: smooth;
+}
+.hero {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 4rem;
+  color: white;
+}
+.hero2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.65rem;
+  color: rgb(204, 194, 194);
+}
+.banar {
+  background: url(../gallary/img/gALLERY.jpg);
+  height: 387px;
+  border-radius: 0px 0px 115px 0px;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+}
+
+/* Media query for devices with a maximum width of 768px */
+@media (max-width: 768px) {
+  .banar {
+    height: 300px; /* Adjust height as needed */
+    border-radius: 0 0 65px 0;
+    width: 100%;
+  }
+}
+
+/* Media query for devices with a maximum width of 576px */
+@media (max-width: 576px) {
+  .banar {
+    height: 200px; /* Adjust height as needed */
+    border-radius: 0 0 65px 0;
+    width: 100%;
+  }
+}
+
+/* Center align the background image */
+@media (max-width: 1200px) {
+  .banar {
+    background-position: center;
+    width: 100%;
+  }
+}
+
+/* -------------gallarry--------------- */
+.gallary {
+  padding: 8rem 0rem 8rem 0rem;
+}
+.sub_gallary img {
+  height: 307px;
+  width: 363px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+/* last---------------- */
+.button {
+  background-color: rgb(106, 150, 31);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  padding: 10px 25px 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.hero3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.65rem;
+  color: rgb(14, 13, 13);
+}
+.hero4 {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+.banar2 {
+  background-image: url("../compound/bannar2.jpg");
+  background-size: cover;
+  height: 439px;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+/* ------------footer---------- */
+.hero5 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 1rem;
+  color: rgb(204, 194, 194);
+  font-size: 0.9rem;
+}
+.foot-header {
+  color: white;
+  font-size: 1.35rem;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 550;
+}
+.hero6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 2rem;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+}
+.hero7 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+}

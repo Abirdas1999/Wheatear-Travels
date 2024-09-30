@@ -1,0 +1,184 @@
+p, span{
+    font-family: "lato", sans-serif ;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "oxygen", sans-serif;
+}
+/* -------------------- */
+
+/* ----------------// */
+
+
+.navlogo{
+    width: 7rem;
+}
+
+.get_a_quote{
+    border-radius: 50px;
+}
+
+.landing_image{
+    width: 100%;
+    height: 65vh;
+    border-radius: 0 0 115px 0;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 992px){
+    .landing_image{
+        width:100%;
+        height: 35vh;
+        border-radius: 0 0 65px 0;
+    }
+}
+
+/* Media query for tablets and smaller devices */
+@media only screen and (max-width: 768px) {
+    .landing_image {
+        border-radius: 0 0 65px 0;
+        width: 100%;
+    }
+}
+
+
+.text{
+    font-size: 45px;
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+
+.package-cards{
+    border-radius: 45px 0 45px 45px; 
+    height: 25rem;
+    width: 21rem;
+    border: none;
+    position: relative;
+}
+.package-cards h2{
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+}
+.package-cards-text p{
+    display: -webkit-box;
+    width: 70%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+div.transbox {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    margin: 30px;
+    position: absolute;
+    /* font-weight: bold; */
+  }
+
+.photo{
+    border-radius: 45px 0 45px 45px; 
+    height: 25rem;
+    transition: 0.5s ease-in;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo:hover{
+    transform: translateY(-15px);
+}
+
+.content{
+    position: absolute;
+    font-weight: 650;
+    margin-top: 37vh;
+    margin-left: 30px; 
+    color: white;
+    pointer-events: none;
+}
+
+.rupee{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.button{
+    border-radius: 25px;
+    width: 8rem;
+}
+
+.package-cards-text{
+    padding-inline: none;
+ }
+
+@media only screen and (max-width: 992px) {
+    .content {
+        margin-top: 35vh;
+        margin-left: 30px;
+        margin-right: auto;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .package-cards {
+        width: 100%;
+        max-width: 21rem;
+        margin: 0 auto;
+    }
+
+    .photo {
+        max-width: 100%;
+    }
+
+    .package-cards-text{
+       padding-inline: 2rem;
+    }
+}
+/* -------------------------------buttom----------------------- */
+.botom-content h2{
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: "Oxygen", sans-serif;
+}
+.botom-content h2 span{
+    font-size: 4rem;
+    color: rgb(240,193,2);
+}
+.botom-content2 .btn{
+    font-size: 1.66rem;
+    border-radius: 10px;
+    padding: 6px;
+    padding-inline: 20px;
+    font-weight:700;
+    color: rgba(62, 62, 62, 0.932);
+}
+
+/* ------------footer---------- */
+.hero5{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1rem;
+    color: rgb(204, 194, 194);
+    font-size: 0.90rem;
+}
+.foot-header{
+    color: white;
+    font-size: 1.35rem;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 550;
+}
+.hero6{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(255, 255, 255);
+    font-size: 0.90rem;
+}
+.hero7{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 0.90rem;
+}

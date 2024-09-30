@@ -1,0 +1,197 @@
+p,
+span {
+  font-family: "lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "oxygen", sans-serif;
+}
+
+.navlogo {
+  width: 7rem;
+}
+
+.get_a_quote {
+  border-radius: 50px;
+}
+
+.landing img {
+  border-radius: 0 0 115px 0;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .landing_image {
+    border-radius: 0 0 65px 0;
+    width: 100%;
+  }
+}
+
+/* Media query for smaller devices like tablets */
+@media (max-width: 768px) {
+  .landing_image {
+    border-radius: 0 0 65px 0;
+    width: 100%;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 576px) {
+  .landing_image {
+    border-radius: 0 0 65px 0;
+    width: 100%;
+  }
+}
+
+.add_on_cards {
+  border-radius: 45px;
+  /* height: 18rem; */
+  border: none;
+  /* padding-inline: 10px; */
+}
+
+.photo {
+  border-radius: 45px 45px 45px 45px;
+  /* height: 18rem; */
+  transition: 0.3s ease-in;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo:hover {
+  transform: translateY(-15px);
+}
+
+.text {
+  position: absolute;
+  margin-top: 22vh;
+  margin-left: 15px;
+  color: white;
+}
+
+.garden {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.photo2 {
+  border-radius: 15px;
+}
+.pre-press{
+  position: relative;
+}
+
+.press {
+  width: 11rem;
+  /* height: 7rem; */
+  border-radius: 15px 0 15px 0;
+  /* margin-top: -2rem; */
+  text-align: start;
+  /* padding-left: 30px; */
+  font-size: 12px;
+  position: absolute;
+  bottom: -3rem;
+  left:-3rem;
+}
+@media only screen and (max-width: 1066px) {
+  .press {
+    bottom: -1rem;
+    left:-0rem;
+    font-size: 10px;
+    width: 9rem;
+
+    /* height: 4rem; */
+  }
+  .add_on_cards{
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 740px) {
+  
+  .add_on_cards{
+    height: 100%;
+    
+  }
+  .pre_add_on_cards{
+
+  }
+}
+@media only screen and (max-width: 556px) {
+  
+  .photo{
+    /* height: 10rem; */
+    width: 40%;
+    
+  }
+}
+
+/* last---------------- */
+.button {
+  background-color: rgb(106, 150, 31);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  padding: 10px 25px 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.button:hover {
+  background-color: rgb(29, 28, 28);
+}
+.hero3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.65rem;
+  color: rgba(14, 13, 13, 0.778);
+}
+.hero4 {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+.banar2 {
+  background-image: url("../compound/bannar2.jpg");
+  background-size: cover;
+  height: 439px;
+  background-repeat: no-repeat;
+   width: 100vw;
+}
+
+/* ------------footer---------- */
+.hero5 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 1rem;
+  color: rgb(204, 194, 194);
+  font-size: 0.9rem;
+}
+.foot-header {
+  color: white;
+  font-size: 1.35rem;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 550;
+}
+.hero6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 2rem;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+}
+.hero7 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+}

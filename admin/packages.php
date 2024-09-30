@@ -1,0 +1,345 @@
+<?php
+include_once './admin/classes/packageUpdate.php';
+$packageUpdate = new PackageUpdate();
+$packageUpdates = $packageUpdate->getPackage();
+
+// Delete package logic
+if (isset($_POST['delete_register'])) {
+    $packageUpdate->deletePackageByNo($_POST['no']);
+    header("Location: " . $_SERVER['PHP_SELF']); // Redirect to the same page to prevent form resubmission
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Buttons</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/popup.css">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <img src="./asset/logo.png" alt="" style="height: 45px; ">
+                </div>
+                <div class="sidebar-brand-text mx-3">Wheatever-Travels</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesHome"
+                    aria-expanded="true" aria-controls="collapseUtilitiesHotel">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <span>Home</span>
+                </a>
+                <div id="collapseUtilitiesHome" class="collapse" aria-labelledby="headingUtilitiesHome"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <!-- <h6 class="collapse-header">Hotel Organization:</h6>
+            <a class="collapse-item" href="hotel.php">Enquiry</a> -->
+                        <a class="collapse-item" href="homeQ&A.php">Q&A</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="bi bi-airplane-fill"></i>
+                    <span>Packages</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom packages:</h6>
+                        <a class="collapse-item" href="packages.php">Places</a>
+                        <a class="collapse-item" href="package.php">Add Packages</a>
+                        <a class="collapse-item" href="enquire.php">Enquiry</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesHotel"
+                    aria-expanded="true" aria-controls="collapseUtilitiesHotel">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <span>Hotels</span>
+                </a>
+                <div id="collapseUtilitiesHotel" class="collapse" aria-labelledby="headingUtilitiesHotel"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Hotel Organization:</h6>
+                        <a class="collapse-item" href="hotel.php">Enquiry</a>
+                        <a class="collapse-item" href="hotelq&a.php">Q&A</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesFlight"
+                    aria-expanded="true" aria-controls="collapseUtilitiesFlight">
+                    <i class="bi bi-airplane"></i>
+                    <span>Flight</span>
+                </a>
+                <div id="collapseUtilitiesFlight" class="collapse" aria-labelledby="headingUtilitiesFlight"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Airport Organization:</h6>
+                        <a class="collapse-item" href="flight.php">Enquiry</a>
+                        <a class="collapse-item" href="flightq&a.php">Q&A</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesGallary"
+                    aria-expanded="true" aria-controls="collapseUtilitiesGallary">
+                    <i class="bi bi-image-fill"></i>
+                    <span>Gallary</span>
+                </a>
+                <div id="collapseUtilitiesGallary" class="collapse" aria-labelledby="headingUtilitiesGallary"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Photos:</h6>
+                        <a class="collapse-item" href="photo.php">Add Photos</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesAddons"
+                    aria-expanded="true" aria-controls="collapseUtilitiesAddons">
+                    <i class="bi bi-image-fill"></i>
+                    <span>Addons</span>
+                </a>
+                <div id="collapseUtilitiesAddons" class="collapse" aria-labelledby="headingUtilitiesAddons"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Addons Types:</h6>
+                        <a class="collapse-item" href="bus.php">Buses</a>
+                        <a class="collapse-item" href="visa.php">Visa</a>
+                        <a class="collapse-item" href="passport.php">Passport</a>
+                        <a class="collapse-item" href="forex.php">Forex</a>
+                        <a class="collapse-item" href="cruise.php">Cruise</a>
+                        <a class="collapse-item" href="rent.php">Rent</a>
+                        <a class="collapse-item" href="insurence.php">Insurance</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+            <!-- Divider -->
+
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline d-flex flex-row-reverse">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+
+
+                                <a class="dropdown-item" href="index.php" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">All-Packages</h1>
+
+                    <div class="row">
+                        <div class="container-fluid mt-4">
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <div class="card mt-4">
+                                        <div class="card-body">
+                                            <form action="" method="POST">
+                                                <table class="table table-bordered table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Package No</th>
+                                                            <th>Package Title</th>
+                                                            <th>Package Subtitle</th>
+                                                            <th>Package Price</th>
+                                                            <th>Total Days</th>
+                                                            <th>Photo</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php
+                                                        $index = 1; // Initialize a counter variable
+                                                        foreach ($packageUpdates as $pg): ?>
+                                                            <tr>
+                                                                <td><?= $pg['no']; ?></td>
+                                                                <td><?= $pg['title']; ?></td>
+                                                                <td style="width: 30%;"><?= $pg['subtitle']; ?></td>
+                                                                <td><?= $pg['sell']; ?></td>
+                                                                <td><?= $pg['days']; ?></td>
+                                                                <td>
+                                                                    <img src="admin/img/packages/<?= $pg['photo3']; ?>" alt="xxx" style="height: 70px; width:70px">
+                                                                </td>
+                                                                <td>
+                                                                    <form method="POST" action="" class="d-flex gap-1 d-inline-block mr-2">
+                                                                        <input type="hidden" name="no" value="<?= htmlspecialchars($pg['no']) ?>">
+
+                                                                        <!-- Edit Button -->
+                                                                        <a href="packageReset.php?no=<?= $pg['no']; ?>" class="btn btn-dark btn-sm" id="edit">Edit</a>
+
+                                                                        <!-- Delete Button -->
+                                                                        <button type="submit" class="btn btn-danger btn-sm ml-2" name="delete_register">Delete</button>
+                                                                    </form>
+                                                                </td>
+                                                            </tr>
+                                                        <?php
+                                                            $index++; // Increment the counter
+                                                        endforeach;
+                                                        ?>
+                                                    </tbody>
+                                                </table>
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+                                    <canvas id="chart-options-example"></canvas>
+
+                                    <!-- Footer -->
+                                    <footer class="sticky-footer bg-white">
+                                        <div class="container my-auto">
+                                            <div class="copyright text-center my-auto">
+                                                <span>Copyright &copy; Aarhat iserv 2024</span>
+                                            </div>
+                                        </div>
+                                    </footer>
+                                    <!-- End of Footer -->
+                                </div>
+                                <!-- End of Content Wrapper -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Page Wrapper -->
+
+                    <!-- Scroll to Top Button-->
+                    <a class="scroll-to-top rounded" href="#page-top">
+                        <i class="fas fa-angle-up"></i>
+                    </a>
+
+                    <!-- Logout Modal-->
+                    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                    <a class="btn btn-primary" href="login.html">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap core JavaScript-->
+                    <script src="vendor/jquery/jquery.min.js"></script>
+                    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                    <script src="js/addRow.js"></script>
+
+                    <!-- Core plugin JavaScript-->
+                    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+                    <!-- Custom scripts for all pages-->
+                    <script src="js/sb-admin-2.min.js"></script>
+                    <!-- <script src="./js/button2.js"></script> -->
+                    <script src="./js/popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navlogo{
+    width: 7rem;
+}
+.get_a_quote{
+    border-radius: 50px;
+}
+
+.main-container{
+    overflow: hidden;
+    background-color: rgb(242,242,242);
+}
+.html{
+    scroll-behavior: smooth;
+}
+/* -----------hero--------- */
+.hero{
+    font-family: "Oxygen", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4rem;
+    color: white;
+}
+.hero2{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.65rem;
+    color: rgb(204, 194, 194);
+}
+/* Default styles for the banner */
+.banar {
+    background: url(../hotel/img/Hotel.jpg);
+    height: 50vh;
+    border-radius: 0px 0px 115px 0px;
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image */
+}
+
+/* Media query for smaller devices */
+@media screen and (max-width: 768px) {
+    .banar {
+        height: 30vh; /* Adjust height for smaller screens */
+        border-radius: 0 0 65px 0; /* Remove border radius for smaller screens if needed */
+    }
+}
+
+/* Media query for even smaller devices */
+@media screen and (max-width: 480px) {
+    .banar {
+        height: 20vh;
+        border-radius: 0 0 65px 0; /* Further adjust height for very small screens */
+    }
+}
+/* --------------------form--------------------- */
+.container-fluid{
+    background-color: rgb(242,242,242);
+}
+.main-form{
+    width: 360px;
+    height: 400px;
+    background-position: center;
+    border-radius: 5px;
+    margin: 8% auto;
+    background: #fff;
+    position: relative;
+}
+.main-form form{
+    position: absolute;
+    width: 280px;
+    top: 100px;
+    left: 40px;
+    transition: 0.5s;
+}
+.form3 input{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+::placeholder{
+    color: #777;
+}
+.btn-box{
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+.btn-box button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    /* background: linear-gradient(to right,rgba(118, 194, 43, 0.821),rgb(64, 122, 8)); */
+    background: rgb(106,150,31);
+    border-radius: 50px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: "Lato", sans-serif;
+}
+.iner-div{
+    background: rgb(153, 208, 153);
+    backdrop-filter: blur(10px);
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    /* z-index: 50;
+    left: -1rem; */
+}
+
+
+/* ---------------------massage----------------- */
+.btn2{
+    background-color: rgb(106,150,31);
+    border-radius: 15px 0px;
+    padding: 0.7rem 3.1rem;
+    margin-top: -4.8rem;
+    position: relative;
+    right: 35%;
+    color: white;
+    font-weight:645;
+    text-align: center;
+    font-size: 1.15rem;
+}
+.button_text{
+    margin-top: 1rem;
+    
+}
+@media screen and (max-width: 590px){
+    .btn2{
+        right: -17%;
+        bottom: 3%;
+        padding: 1.25rem 3rem;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+    .button_text{
+        margin-top: 1rem;
+        
+    }
+}
+@media screen and (max-width: 410px){
+    .btn2{
+        right: -17%;
+        bottom: 3%;
+        padding: 0.75rem 0.5rem;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+    .button_text{
+        margin-top: 1rem;
+        
+    }
+}
+@media screen and (max-width: 337px){
+    .btn2{
+        right: -17%;
+        bottom: 3%;
+        padding: 0.75rem 0.5rem;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        font-size: 0.67rem;
+    }
+    .button_text{
+        margin-top: 1rem;
+        
+    }
+}
+.accordion{
+    width: 450px;
+}
+.accordion-title{
+    color: rgb(124, 167, 50);
+    padding: 5px;
+}
+.accordion-content{
+    display: none;
+    cursor: pointer;
+}
+.accordion-title h4{
+    font-size: 1.16rem;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 600;
+}
+.accordion-content p{
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+    color: rgba(45, 41, 41, 0.785);
+    font-weight: 450;
+    font-family: "Lato", sans-serif;
+}
+.accordion-item{
+    margin-bottom: 10px;
+}
+.accordion-item.active .accordion-content{
+    display: block;
+}
+@media screen and (max-width: 505px){
+    .accordion-content{
+        font-size: 0.8rem;
+        width: 51%;
+    }
+    .accordion-item h4{
+        font-size: 1rem;
+    }
+}
+/* ------------footer---------- */
+.hero5{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1rem;
+    color: rgb(204, 194, 194);
+    font-size: 0.90rem;
+}
+.foot-header{
+    color: white;
+    font-size: 1.35rem;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 550;
+}
+.hero6{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(255, 255, 255);
+    font-size: 0.90rem;
+}
+.hero7{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 0.90rem;
+}
